@@ -54,7 +54,59 @@ body {
     position: relative;
     top: 18px;
 }
+.list li a:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    bottom: 1px;;
+    left: 0;
+    background-color: rgb(31, 29, 28);
+    opacity: 0;
+}
 
+.list li a:hover:after {
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.list-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: absolute;
+    width: 170px;
+    padding: 10px;
+    background-color: rgba(192, 145, 95, 0.785);
+    text-align: center;
+    left: 0;
+    top: 190%;
+    visibility: hidden;
+    transition: opacity 0.5s;
+    z-index: 50;
+    border: 1px solid rgb(192, 145, 95);
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.dropdown li a {
+    color: white;
+    display: block;
+    padding: 5px ;
+    text-align: center;
+    position: relative;
+    top: 5px;
+    margin: 0;
+}
+.list-dropdown:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+.dropdown li {
+    display: block;
+}
 .fa-solid.fa-magnifying-glass {
     position: relative;
     left: 80px;
